@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""Entry point del pipeline.
+"""Pipeline entry point.
 
-Ejecuta el workflow completo.
+Run the full workflow.
 """
 
 from hep_pipeline.workflow_core import HEPWorkflow
@@ -11,7 +11,7 @@ def main():
     try:
         workflow.run()
     except KeyboardInterrupt:
-        print("\n\nWorkflow interrumpido por el usuario.")
+        print("\n\nWorkflow interrupted por el usuario.")
     except Exception as e:
         print(f"\nError: {e}")
         import traceback
